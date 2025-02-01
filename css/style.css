@@ -186,7 +186,7 @@ body {
 .about .row .content p {
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 150;
   line-height: 1.6;
 }
 
@@ -250,6 +250,7 @@ body {
 .contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
+  height: 80vh;
   object-fit: cover;
 }
 
@@ -309,7 +310,7 @@ body {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
+    background-color: #d3d3d3;
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
