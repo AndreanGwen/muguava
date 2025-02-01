@@ -8,7 +8,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    background-color: #f8f9fa;
 }
+
 
 .container {
     width: 900px;
@@ -16,11 +18,14 @@ body {
     margin: auto ;
     text-align: center;
     padding-top: 10px;
+    transition: transform .5s;
 }
+
 
 svg {
     width: 30px;
 }
+
 
 header {
     display: flex;
@@ -29,15 +34,17 @@ header {
     padding: 20px 0;
 }
 
+
 header .icon-cart {
     position: relative;
 }
+
 
 header .icon-cart span {
     display: flex;
     width: 25px;
     height: 25px;
-    background-color: red;
+    background-color: #4285f4;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -45,4 +52,153 @@ header .icon-cart span {
     position: absolute;
     top: 50%;
     right: -20px;
+}
+
+
+.listproduk {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.listproduk .item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+
+.listproduk .item h2 {
+    font-weight: 500;
+    font-size: large;
+    color: #333333;
+}
+
+
+.listproduk .item img {
+    width: 90%;
+    filter: drop-shadow(0 5px 10px #0009);
+}
+
+
+.listproduk .item .price {
+    font-size: small;
+    color: #333333;
+}
+
+
+.listproduk .item .tambahkeranjang {
+    background-color: #9AA6B2;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.cartTab {
+    width: 400px;
+    background-color: #ffffff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+
+body.showCart .container {
+    transform: translateX(-250px);
+}
+
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    color: #000000;
+}
+
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.cartTab .btn button{
+    background-color: #BCCCDC;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.cartTab .btn .close {
+    background-color: #c8d9e6;
+}
+
+
+.cartTab .listkeranjang .item  {
+    display: grid;
+    grid-template-columns:70px 100px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.cartTab .listkeranjang .item img {
+    width: 100%;
+}
+
+
+.listkeranjang .jumlahbarang span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #9AA6B2;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+
+.listkeranjang .jumlahbarang span:nth-child(2) {
+    background-color: transparent;
+    color: #000000;
+}
+
+
+.listkeranjang .name {
+    color: #000000;
+}
+
+
+.listkeranjang .item:nth-child(even) {
+    background-color:#c1c6ca ;
+}
+
+
+.listkeranjang {
+    overflow: auto;
+}
+
+.listkeranjang::-webkit-scrollbar {
+    width: 0;
 }
