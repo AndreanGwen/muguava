@@ -227,11 +227,13 @@ body.showCart .container {
 
 /* media queries */
 /* Untuk layar dengan lebar maksimal 992px */
+/* Untuk layar dengan lebar maksimal 992px */
 @media screen and (max-width: 992px) {
   .listproduk {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mengatur tiga kolom */
-    gap: 16px; /* Menambahkan jarak antar kolom */
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+    gap: 10px; /* Memberikan jarak antar item */
+    padding: 10px; /* Tambahkan padding agar tidak terlalu mepet */
   }
 }
 
@@ -239,28 +241,47 @@ body.showCart .container {
 @media screen and (max-width: 767px) {
   .listproduk {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Mengatur dua kolom */
-    gap: 16px; /* Menambahkan jarak antar kolom */
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 10px; /* Memberikan jarak antar item */
+    padding: 10px; /* Padding agar tidak terlalu rapat dengan sisi layar */
   }
 
   .detail {
-    display: grid; /* Menjadikan .detail sebagai grid */
-    grid-template-columns: 1fr; /* Satu kolom */
-    text-align: center; /* Menengahkan teks */
+    display: flex; /* Gunakan flexbox agar lebih fleksibel */
+    flex-direction: column; /* Tata elemen dalam satu kolom */
+    align-items: center; /* Posisikan ke tengah */
+    text-align: center; /* Tengah untuk teks */
+    padding: 10px; /* Tambahkan padding */
+  }
+
+  .detail .image {
+    width: 100%; /* Pastikan kontainer gambar mengambil seluruh lebar */
+    display: flex; 
+    justify-content: center; /* Posisi tengah */
   }
 
   .detail .image img {
-    width: 100%; /* Menyesuaikan gambar dengan lebar kontainer */
-    height: 40vh; /* Mengatur tinggi gambar */
-    object-fit: cover; /* Menjaga proporsi gambar agar tidak terdistorsi */
+    max-width: 90%; /* Gambar tidak terlalu besar */
+    height: auto; /* Jaga aspek rasio */
+    max-height: 40vh; /* Batasi tinggi agar tidak terlalu besar */
+    object-fit: contain; /* Pastikan gambar tidak terpotong */
   }
 
   .detail .name {
-    font-size: x-large; /* Ukuran font lebih besar */
-    margin: 0;
+    font-size: 1.5rem; /* Sesuaikan ukuran font */
+    margin-top: 10px; /* Tambahkan jarak */
+  }
+
+  .detail .buttons {
+    display: flex;
+    flex-wrap: wrap; /* Pastikan tombol tidak kepanjangan */
+    gap: 8px; /* Beri jarak antar tombol */
+    justify-content: center;
   }
 
   .detail .buttons .button {
-    font-size: small; /* Ukuran font untuk tombol */
+    font-size: 0.9rem; /* Sesuaikan ukuran font tombol */
+    padding: 8px 12px; /* Tambahkan padding agar lebih klik-friendly */
   }
 }
+
