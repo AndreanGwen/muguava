@@ -66,8 +66,10 @@ addCartToHTML();
 
 const addCartToHTML = () => {
     listkeranjangHTML.innerHTML = '';
+    let totalquantity = 0;
     if (carts.length > 0){
         carts.forEach (cart => {
+            totalquantity = totalquantity + cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add ('item');
             let positionproduk = listproduk.findIndex((value) => value.id == cart. produk_id);
@@ -91,6 +93,7 @@ const addCartToHTML = () => {
             listkeranjangHTML.appendChild(newCart);
         })
     }
+    iconCartSpan.innerText = totalquantity;
 }
 
 const initApp = () => {
