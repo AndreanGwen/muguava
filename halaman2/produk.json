@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "name" : "MuGuava White",
+        "harga" : "38",
+        "image" : "img/1.png"
+    },
+    {
+        "id" : 2,
+        "name" : "MuGuava Black",
+        "harga" : "38",
+        "image" : "img/1.png"
+    }
+]
