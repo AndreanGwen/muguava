@@ -22,6 +22,15 @@ body {
 }
 
 
+.title {
+  text-align: left; /* Teks rata kiri */
+  font-size: 16px; 
+  font-weight: 500;
+  margin-bottom: 10px; 
+}
+
+
+
 svg {
     width: 30px;
 }
@@ -217,95 +226,41 @@ body.showCart .container {
 
 
 /* media queries */
+/* Untuk layar dengan lebar maksimal 992px */
+@media screen and (max-width: 992px) {
+  .listproduk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mengatur tiga kolom */
+    gap: 16px; /* Menambahkan jarak antar kolom */
+  }
+}
 
-/* laptop */
-@media (max-width: 1366px) {
-    html {
-      font-size: 75%;
-    }
+/* Untuk layar dengan lebar maksimal 767px */
+@media screen and (max-width: 767px) {
+  .listproduk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mengatur dua kolom */
+    gap: 16px; /* Menambahkan jarak antar kolom */
   }
-  
-  /* tablet */
-  @media (max-width: 768px) {
-    html {
-      font-size: 62.5%;
-    }
-  
-    #menu-travel {
-      display: inline-block;
-    }
-  
-    .navbar .navbar-nav {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background-color: #d3d3d3;
-      width: 30rem;
-      height: 100vh;
-      transition: 0.3s;
-    }
-  
-    .navbar .navbar-nav.active {
-      right: 0;
-    }
-  
-    .navbar .navbar-nav a {
-      color: var(--bg);
-      display: block;
-      margin: 1.5rem;
-      padding: 0.5rem;
-      font-size: 2rem;
-    }
-  
-    .navbar.navbar-nav a::after {
-      transform-origin: 0 0;
-    }
-  
-    .navbar.navbar-nav a:hover::after {
-      transform: scaleX(0.2);
-    }
-  
-    .about .row {
-      flex-wrap: wrap;
-    }
-  
-    .about .row .about-img img {
-      height: 24rem;
-      object-fit: cover;
-      object-position: center;
-    }
-  
-    .about .row .content {
-      padding: 0;
-    }
-  
-    .about .row .content h3 {
-      margin-top: 1rem;
-      font-size: 2rem;
-    }
-  
-    .about .row .content p {
-      font-size: 1.6rem;
-    }
-  
-    .menu p {
-      font-size: 1.2rem;
-    }
-    .contact .row {
-      flex-wrap: wrap;
-    }
-    .contact .row .map {
-      height: 30rem;
-    }
-    .contact .row form {
-      padding-top: 0;
-    }
-  
-    /* mobile */
-    @media (max-width: 450px) {
-      html {
-        font-size: 55%;
-      }
-    }
+
+  .detail {
+    display: grid; /* Menjadikan .detail sebagai grid */
+    grid-template-columns: 1fr; /* Satu kolom */
+    text-align: center; /* Menengahkan teks */
   }
-  
+
+  .detail .image img {
+    width: 100%; /* Menyesuaikan gambar dengan lebar kontainer */
+    height: 40vh; /* Mengatur tinggi gambar */
+    object-fit: cover; /* Menjaga proporsi gambar agar tidak terdistorsi */
+  }
+
+  .detail .name {
+    font-size: x-large; /* Ukuran font lebih besar */
+    margin: 0;
+  }
+
+  .detail .buttons .button {
+    font-size: small; /* Ukuran font untuk tombol */
+  }
+}
