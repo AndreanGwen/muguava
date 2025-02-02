@@ -62,6 +62,11 @@ const tambahkeranjang = (produk_id) => {
         
 }
 addCartToHTML();
+addCartToMemory();
+}
+
+const addCartToMemory = () => {
+    localStorage.setItem ('cart', JSON.stringify(carts));
 }
 
 const addCartToHTML = () => {
@@ -103,6 +108,12 @@ const initApp = () => {
     .then (data => {
         listproduk = data;
         addDataToHTML ();
+
+        // keranjang dari lokal
+        if (localStorage.getItem('cart')) {
+            carts = JSON.parse (localStorage.getItem('cart'));
+            addCartToHTML ();
+        }
     })
 }
 
