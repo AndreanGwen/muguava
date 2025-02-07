@@ -128,24 +128,13 @@ body {
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0), 5;
 }
 
-.hero .content .ctai {
+.hero .content .cta {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
   color: #fff;
   background-color: var(--primary);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-}
-
-.hero .content .ctau {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.4rem;
-  color: #fff;
-  background-color: #5da96a;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -197,7 +186,7 @@ body {
 .about .row .content p {
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
-  font-weight: 150;
+  font-weight: 100;
   line-height: 1.6;
 }
 
@@ -213,7 +202,7 @@ body {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-size: rem;
+  font-size:rem;
   font-weight: 100;
   line-height: 1.6;
 }
@@ -236,7 +225,7 @@ body {
 }
 
 .menu .row .menu-card-title {
-  margin: 1, 5rem;
+  margin: 1,5rem;
 }
 
 .menu .row .menu-card .menu-card-price {
@@ -261,7 +250,6 @@ body {
 .contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
-  height: 80vh;
   object-fit: cover;
 }
 
@@ -321,7 +309,7 @@ body {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #d3d3d3;
+    background-color: #fff;
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
